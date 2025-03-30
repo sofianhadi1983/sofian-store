@@ -6,11 +6,12 @@ export const metadata = {
 }
 
 const Home = async () => {
-  const latesProducts = await getLatestProducts();
+  const latestProducts = await getLatestProducts();
   return <>
     <ProductList 
-      data={latesProducts} 
+      data={latestProducts} 
       title="Newest Arrival"
+      limit={4}
     />
   </>
 }
